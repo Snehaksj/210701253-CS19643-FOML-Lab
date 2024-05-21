@@ -1,0 +1,30 @@
+.hero {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 90vw;
+  scroll-behavior: smooth;
+  /* height: 60vh; */
+  margin: auto;
+  align-items: center;
+}
+.subhero {
+  margin-top: 5vh;
+  height: 60vh;
+  /* background-color: white; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  /* align-items: center; */
+  align-items: start;
+}
+
+@media screen and (max-width: 1300px) {
+  .hero {
+    margin-top: 1vh;
+    height: 40vh;
+  }
+  .subhero {
+    height: 45vh;
+  }
+}

@@ -1,0 +1,40 @@
+.Floatingimage {
+  /* height: 30vh; */
+  /* background-color: white; */
+  display: flex;
+  /* margin-top: 5em; */
+  /* padding-top: 6em; */
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+}
+
+.Floatingimage img {
+  height: 40vh;
+  animation: floatAnimation 0.75s infinite ease-in-out alternate;
+  border-radius: 100%;
+  filter: drop-shadow(0 0 90px rgb(29, 248, 26));
+}
+
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0);
+  } /* Start position */
+  100% {
+    transform: translateY(-30px);
+  } /* End position */
+}
+@media screen and (max-width: 1300px) {
+  .Floatingimage {
+    position: relative; /* Add position relative */
+    top: 50%; /* Move the element down by 50% of its container */
+    left: 50%;
+    transform: translate(
+      -50%,
+      -50%
+    ); /* Move the element back up by 50% of its own height */
+  }
+  .Floatingimage img {
+    height: 30vh;
+  }
+}
